@@ -10,6 +10,7 @@ public class XClass {
     public String name;
     public XCon xc;
     private List<Object> characteristics = new ArrayList<>();
+
     public XClass(List<Object> chars) {
         this.characteristics = chars;
     }
@@ -51,8 +52,8 @@ public class XClass {
 
     static class XCon {
 
-        public String name;
         private final String block;
+        public String name;
         private List<XXLParser.IndexesContext> params = new ArrayList<>();
 
         public XCon(List<XXLParser.IndexesContext> params, String block, String name) {

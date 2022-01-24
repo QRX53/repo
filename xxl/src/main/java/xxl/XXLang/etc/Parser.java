@@ -22,17 +22,6 @@ public class Parser {
 
     }
 
-    public static void execBlock(String str) {
-
-        XXLLexer lexer = new XXLLexer(CharStreams.fromString(str));
-        XXLParser parser = new XXLParser(new CommonTokenStream(lexer));
-        parser.setBuildParseTree(true);
-        ParseTree tree = parser.parse();
-
-        lang.visitor.visit(tree);
-
-    }
-
     public Parser(File file) {
         this.file = file;
     }
@@ -44,6 +33,17 @@ public class Parser {
     public Parser(String str) {
         this.str = str;
         this.file = new File(str);
+    }
+
+    public static void execBlock(String str) {
+
+        XXLLexer lexer = new XXLLexer(CharStreams.fromString(str));
+        XXLParser parser = new XXLParser(new CommonTokenStream(lexer));
+        parser.setBuildParseTree(true);
+        ParseTree tree = parser.parse();
+
+        lang.visitor.visit(tree);
+
     }
 
     public void setFile(File file) {

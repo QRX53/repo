@@ -48,11 +48,11 @@ ifStatement
  ;
 
 ifStat
- : If expression Do block
+ : If '(' expression ')' Do block
  ;
 
 elseIfStat
- : Else If expression Do block
+ : Else If '(' expression ')' Do block
  ;
 
 constructorStatement
@@ -88,15 +88,15 @@ whileStatement
  ;
 
 webServerStatement
- : 'create WebServer' '(' Number ')'
+ : 'create WebServer' '(' expression ')'
  ;
 
 addWebServerTextStatement
- : AddWSText '(' String ')'
+ : AddWSText '(' expression ')'
  ;
 
 waitStatement
- : Wait '(' Number ')'
+ : Wait '(' expression ')'
  ;
 
 mainFunctionStatement

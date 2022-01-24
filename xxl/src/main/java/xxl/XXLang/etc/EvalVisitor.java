@@ -28,7 +28,7 @@ import static xxl.lang.XXLParser.*;
 public class EvalVisitor extends XXLBaseVisitor<XValue> {
     private static final ReturnValue returnValue = new ReturnValue();
     public final Map<String, Function> functions;
-    private Scope scope;
+    public Scope scope;
 
     public EvalVisitor(Scope scope, Map<String, Function> functions) {
         this.scope = scope;
@@ -90,9 +90,11 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitWebServerStatement(XXLParser.WebServerStatementContext ctx) {
 
+        XValue x = this.visit(ctx.expression());
+
         try {
 
-            int port = Integer.parseInt(ctx.Number().getText());
+            int port = Integer.parseInt(x.asString());
 
             HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
             server.createContext("/", new BasicHTTPHandler());
@@ -108,7 +110,8 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitAddWebServerTextStatement(XXLParser.AddWebServerTextStatementContext ctx) {
 
-        lang.response = ctx.String().getText();
+        XValue resp = this.visit(ctx.expression());
+        lang.response = resp.asString();
 
         return visitChildren(ctx);
     }
@@ -235,8 +238,10 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitWaitStatement(XXLParser.WaitStatementContext ctx) {
 
+        XValue x = this.visit(ctx.expression());
+
         try {
-            Thread.sleep(Integer.parseInt(ctx.Number().getText()));
+            Thread.sleep(Integer.parseInt(x.asString()));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
