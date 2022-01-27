@@ -1,8 +1,8 @@
 package xxl;
 
-import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.*;
+import xxl.XXLang.etc.*;
 import xxl.XXLang.etc.Parser;
-import xxl.XXLang.etc.lang;
 
 public class Main {
 
@@ -10,10 +10,20 @@ public class Main {
 
         try {
             lang.resolveImport("System");
-            Parser parser = new Parser(CharStreams.fromFileName("src/main/xxl/Main.x"));
+
+            CharStream path = CharStreams.fromFileName("xxl/src/main/xxl/Main.x".trim());
+
+            Parser parser = new Parser(path);
             parser.parse();
         } catch (Exception e) {
-            System.out.println("[FATAL] " + e.getMessage());
+
+            String err = "[FATAL] " + e.getMessage();
+
+            if (e.getMessage().startsWith("src\\main\\xxl\\") || e.getMessage().startsWith("C:")) {
+                err += " (File not found)";
+            }
+
+            System.out.println(err);
         }
     }
 }

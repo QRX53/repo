@@ -28,7 +28,7 @@ import static xxl.lang.XXLParser.*;
 public class EvalVisitor extends XXLBaseVisitor<XValue> {
     private static final ReturnValue returnValue = new ReturnValue();
     public final Map<String, Function> functions;
-    private Scope scope;
+    public Scope scope;
 
     public EvalVisitor(Scope scope, Map<String, Function> functions) {
         this.scope = scope;
@@ -90,11 +90,11 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitWebServerStatement(XXLParser.WebServerStatementContext ctx) {
 
-        XValue xv = this.visit(ctx.expression());
+        XValue x = this.visit(ctx.expression());
 
         try {
 
-            int port = Integer.parseInt(xv.asString());
+            int port = Integer.parseInt(x.asString());
 
             HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
             server.createContext("/", new BasicHTTPHandler());
@@ -110,8 +110,8 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitAddWebServerTextStatement(XXLParser.AddWebServerTextStatementContext ctx) {
 
-        XValue xv = this.visit(ctx.expression());
-        lang.response = xv.asString();
+        XValue resp = this.visit(ctx.expression());
+        lang.response = resp.asString();
 
         return visitChildren(ctx);
     }
@@ -130,6 +130,7 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
 
                 String err = "Could not cast to integer " + e.getMessage().replace("F", "f");
                 System.out.println(err);
+                i = 0;
             }
 
         } else if (x.isNumber()) {
@@ -237,10 +238,10 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitWaitStatement(XXLParser.WaitStatementContext ctx) {
 
-        XValue xv = this.visit(ctx.expression());
+        XValue x = this.visit(ctx.expression());
 
         try {
-            Thread.sleep(Integer.parseInt(xv.asString()));
+            Thread.sleep(Integer.parseInt(x.asString()));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -1,5 +1,9 @@
 grammar XXL;
 
+options {
+
+}
+
 parse
  : block EOF
  ;
@@ -48,11 +52,11 @@ ifStatement
  ;
 
 ifStat
- : If expression Do block
+ : If '(' expression ')' Do block
  ;
 
 elseIfStat
- : Else If expression Do block
+ : Else If '(' expression ')' Do block
  ;
 
 constructorStatement

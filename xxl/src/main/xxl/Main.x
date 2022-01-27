@@ -1,12 +1,19 @@
-#import src.main.xxl.Math;
-
 class Main
     void main()
         std:ln("Test");
 
-        create WebServer(8000);
-        WebServer.changeText("txt");
-        std:ln("WebServer online! Visit it at localhost:" + "8000");
+        port = "8000";
+        create WebServer(port);
+        WebServer.changeText(port);
+        std:ln("WebServer online! Visit it at localhost:" + port);
+
+
+        std:ln("Enter text for the WebServer: ");
+        x = input();
+
+        WebServer.changeText(x);
+
+        std:ln("Text changed to: " + x);
 
     endf
 endc
