@@ -88,15 +88,15 @@ whileStatement
  ;
 
 webServerStatement
- : 'create WebServer' '(' Number ')'
+ : 'create WebServer' '(' expression ')'
  ;
 
 addWebServerTextStatement
- : AddWSText '(' String ')'
+ : AddWSText '(' expression ')'
  ;
 
 waitStatement
- : Wait '(' Number ')'
+ : Wait '(' expression ')'
  ;
 
 mainFunctionStatement

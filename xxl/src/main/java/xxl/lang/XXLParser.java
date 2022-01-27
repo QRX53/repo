@@ -1,4 +1,4 @@
-// Generated from /Users/harryharbuck-marlowe/xxl/src/main/java/xxl/XXLang/etc/XXL.g4 by ANTLR 4.9.2
+// Generated from /Users/harryharbuck-marlowe/Documents/repo/xxl/src/main/java/xxl/XXLang/etc/XXL.g4 by ANTLR 4.9.2
 package xxl.lang;
 
 import org.antlr.v4.runtime.*;
@@ -127,25 +127,25 @@ public class XXLParser extends Parser {
                     "!\3\2\2\2\u00ef\u00f0\7\34\2\2\u00f0\u00f1\79\2\2\u00f1\u00f2\5\62\32" +
                     "\2\u00f2\u00f3\7:\2\2\u00f3\u00f4\7\36\2\2\u00f4\u00f5\5\4\3\2\u00f5\u00f6" +
                     "\7\37\2\2\u00f6#\3\2\2\2\u00f7\u00f8\7\b\2\2\u00f8\u00f9\79\2\2\u00f9" +
-                    "\u00fa\7A\2\2\u00fa\u00fb\7:\2\2\u00fb%\3\2\2\2\u00fc\u00fd\7\r\2\2\u00fd" +
-                    "\u00fe\79\2\2\u00fe\u00ff\7C\2\2\u00ff\u0100\7:\2\2\u0100\'\3\2\2\2\u0101" +
-                    "\u0102\7\22\2\2\u0102\u0103\79\2\2\u0103\u0104\7A\2\2\u0104\u0105\7:\2" +
-                    "\2\u0105)\3\2\2\2\u0106\u0107\7\t\2\2\u0107\u0108\5\4\3\2\u0108\u0109" +
-                    "\7\37\2\2\u0109+\3\2\2\2\u010a\u010f\7B\2\2\u010b\u010c\7=\2\2\u010c\u010e" +
-                    "\7B\2\2\u010d\u010b\3\2\2\2\u010e\u0111\3\2\2\2\u010f\u010d\3\2\2\2\u010f" +
-                    "\u0110\3\2\2\2\u0110-\3\2\2\2\u0111\u010f\3\2\2\2\u0112\u0113\7$\2\2\u0113" +
-                    "\u0114\7B\2\2\u0114\u0115\5\4\3\2\u0115\u0116\7\n\2\2\u0116/\3\2\2\2\u0117" +
-                    "\u011c\5\62\32\2\u0118\u0119\7=\2\2\u0119\u011b\5\62\32\2\u011a\u0118" +
-                    "\3\2\2\2\u011b\u011e\3\2\2\2\u011c\u011a\3\2\2\2\u011c\u011d\3\2\2\2\u011d" +
-                    "\61\3\2\2\2\u011e\u011c\3\2\2\2\u011f\u0120\b\32\1\2\u0120\u0121\7\61" +
-                    "\2\2\u0121\u0144\5\62\32\26\u0122\u0123\7-\2\2\u0123\u0144\5\62\32\25" +
-                    "\u0124\u0144\7A\2\2\u0125\u0144\7@\2\2\u0126\u0144\7!\2\2\u0127\u0129" +
-                    "\5\f\7\2\u0128\u012a\5\66\34\2\u0129\u0128\3\2\2\2\u0129\u012a\3\2\2\2" +
-                    "\u012a\u0144\3\2\2\2\u012b\u012d\5\64\33\2\u012c\u012e\5\66\34\2\u012d" +
-                    "\u012c\3\2\2\2\u012d\u012e\3\2\2\2\u012e\u0144\3\2\2\2\u012f\u0131\7B" +
-                    "\2\2\u0130\u0132\5\66\34\2\u0131\u0130\3\2\2\2\u0131\u0132\3\2\2\2\u0132" +
-                    "\u0144\3\2\2\2\u0133\u0135\7C\2\2\u0134\u0136\5\66\34\2\u0135\u0134\3" +
-                    "\2\2\2\u0135\u0136\3\2\2\2\u0136\u0144\3\2\2\2\u0137\u0138\79\2\2\u0138" +
+                    "\u00fa\5\62\32\2\u00fa\u00fb\7:\2\2\u00fb%\3\2\2\2\u00fc\u00fd\7\r\2\2" +
+                    "\u00fd\u00fe\79\2\2\u00fe\u00ff\5\62\32\2\u00ff\u0100\7:\2\2\u0100\'\3" +
+                    "\2\2\2\u0101\u0102\7\22\2\2\u0102\u0103\79\2\2\u0103\u0104\5\62\32\2\u0104" +
+                    "\u0105\7:\2\2\u0105)\3\2\2\2\u0106\u0107\7\t\2\2\u0107\u0108\5\4\3\2\u0108" +
+                    "\u0109\7\37\2\2\u0109+\3\2\2\2\u010a\u010f\7B\2\2\u010b\u010c\7=\2\2\u010c" +
+                    "\u010e\7B\2\2\u010d\u010b\3\2\2\2\u010e\u0111\3\2\2\2\u010f\u010d\3\2" +
+                    "\2\2\u010f\u0110\3\2\2\2\u0110-\3\2\2\2\u0111\u010f\3\2\2\2\u0112\u0113" +
+                    "\7$\2\2\u0113\u0114\7B\2\2\u0114\u0115\5\4\3\2\u0115\u0116\7\n\2\2\u0116" +
+                    "/\3\2\2\2\u0117\u011c\5\62\32\2\u0118\u0119\7=\2\2\u0119\u011b\5\62\32" +
+                    "\2\u011a\u0118\3\2\2\2\u011b\u011e\3\2\2\2\u011c\u011a\3\2\2\2\u011c\u011d" +
+                    "\3\2\2\2\u011d\61\3\2\2\2\u011e\u011c\3\2\2\2\u011f\u0120\b\32\1\2\u0120" +
+                    "\u0121\7\61\2\2\u0121\u0144\5\62\32\26\u0122\u0123\7-\2\2\u0123\u0144" +
+                    "\5\62\32\25\u0124\u0144\7A\2\2\u0125\u0144\7@\2\2\u0126\u0144\7!\2\2\u0127" +
+                    "\u0129\5\f\7\2\u0128\u012a\5\66\34\2\u0129\u0128\3\2\2\2\u0129\u012a\3" +
+                    "\2\2\2\u012a\u0144\3\2\2\2\u012b\u012d\5\64\33\2\u012c\u012e\5\66\34\2" +
+                    "\u012d\u012c\3\2\2\2\u012d\u012e\3\2\2\2\u012e\u0144\3\2\2\2\u012f\u0131" +
+                    "\7B\2\2\u0130\u0132\5\66\34\2\u0131\u0130\3\2\2\2\u0131\u0132\3\2\2\2" +
+                    "\u0132\u0144\3\2\2\2\u0133\u0135\7C\2\2\u0134\u0136\5\66\34\2\u0135\u0134" +
+                    "\3\2\2\2\u0135\u0136\3\2\2\2\u0136\u0144\3\2\2\2\u0137\u0138\79\2\2\u0138" +
                     "\u0139\5\62\32\2\u0139\u013b\7:\2\2\u013a\u013c\5\66\34\2\u013b\u013a" +
                     "\3\2\2\2\u013b\u013c\3\2\2\2\u013c\u0144\3\2\2\2\u013d\u013e\7\20\2\2" +
                     "\u013e\u0140\79\2\2\u013f\u0141\7C\2\2\u0140\u013f\3\2\2\2\u0140\u0141" +
@@ -1093,7 +1093,7 @@ public class XXLParser extends Parser {
                 setState(246);
                 match(OParen);
                 setState(247);
-                match(Number);
+                expression(0);
                 setState(248);
                 match(CParen);
             }
@@ -1118,7 +1118,7 @@ public class XXLParser extends Parser {
                 setState(251);
                 match(OParen);
                 setState(252);
-                match(String);
+                expression(0);
                 setState(253);
                 match(CParen);
             }
@@ -1143,7 +1143,7 @@ public class XXLParser extends Parser {
                 setState(256);
                 match(OParen);
                 setState(257);
-                match(Number);
+                expression(0);
                 setState(258);
                 match(CParen);
             }
@@ -2802,8 +2802,8 @@ public class XXLParser extends Parser {
             return getToken(XXLParser.OParen, 0);
         }
 
-        public TerminalNode Number() {
-            return getToken(XXLParser.Number, 0);
+        public ExpressionContext expression() {
+            return getRuleContext(ExpressionContext.class, 0);
         }
 
         public TerminalNode CParen() {
@@ -2845,8 +2845,8 @@ public class XXLParser extends Parser {
             return getToken(XXLParser.OParen, 0);
         }
 
-        public TerminalNode String() {
-            return getToken(XXLParser.String, 0);
+        public ExpressionContext expression() {
+            return getRuleContext(ExpressionContext.class, 0);
         }
 
         public TerminalNode CParen() {
@@ -2889,8 +2889,8 @@ public class XXLParser extends Parser {
             return getToken(XXLParser.OParen, 0);
         }
 
-        public TerminalNode Number() {
-            return getToken(XXLParser.Number, 0);
+        public ExpressionContext expression() {
+            return getRuleContext(ExpressionContext.class, 0);
         }
 
         public TerminalNode CParen() {

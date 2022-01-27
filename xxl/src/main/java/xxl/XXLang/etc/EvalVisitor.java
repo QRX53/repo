@@ -90,9 +90,11 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitWebServerStatement(XXLParser.WebServerStatementContext ctx) {
 
+        XValue xv = this.visit(ctx.expression());
+
         try {
 
-            int port = Integer.parseInt(ctx.Number().getText());
+            int port = Integer.parseInt(xv.asString());
 
             HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
             server.createContext("/", new BasicHTTPHandler());
@@ -108,7 +110,8 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitAddWebServerTextStatement(XXLParser.AddWebServerTextStatementContext ctx) {
 
-        lang.response = ctx.String().getText();
+        XValue xv = this.visit(ctx.expression());
+        lang.response = xv.asString();
 
         return visitChildren(ctx);
     }
@@ -127,7 +130,6 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
 
                 String err = "Could not cast to integer " + e.getMessage().replace("F", "f");
                 System.out.println(err);
-                i = 0;
             }
 
         } else if (x.isNumber()) {
@@ -235,8 +237,10 @@ public class EvalVisitor extends XXLBaseVisitor<XValue> {
     @Override
     public XValue visitWaitStatement(XXLParser.WaitStatementContext ctx) {
 
+        XValue xv = this.visit(ctx.expression());
+
         try {
-            Thread.sleep(Integer.parseInt(ctx.Number().getText()));
+            Thread.sleep(Integer.parseInt(xv.asString()));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
